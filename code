@@ -1,0 +1,59 @@
+#include <iostream>
+#include <iomanip>
+#include <string> 
+using namespace std ; 
+
+int main() {
+//Colors
+const string red("\033[0;31m");
+const string cyan("\033[0;36m");
+const string green("\033[1;32m");
+const string reset("\033[0m");
+const string magenta ("\033[0;35m") ;
+
+//Variables  
+const int redp = 1 , bluep = 2 ; 
+int choice ;
+string redchoice,bluechoice ; 
+
+//intro
+cout << setw(40)<< green <<"The Pill Of Doom\n" ; 
+cout << reset ; 
+cout << setw(48) <<"Version 6.66\n" ;
+cout << setw(39)<< magenta << "Made And Designed By:\n" ; 
+cout << setw(40)<< magenta << "Omashka,Abdul,Zaid" ;
+cout << reset ; 
+cout << "\n\nChoose a Path:" ;
+cout << red << "\n1.Red Pill" ;
+cout << cyan <<"\n2.Blue Pill" ;
+cout<< reset ; 
+cout << "\nPlease Enter a Choice: " ; 
+cin >> choice; 
+
+//begin a new game
+switch (choice) {
+  case redp : 
+    {
+    cout << "\nYou Have Entered The Town Of Doom With 50% Damage" ;
+    cout << "\nWhat Will You Do?" << endl;
+    cout << "\n1. Find Resources In The Town Of Doom (Resources)" ;
+    cout << "\n2. Fight For Your Freedom With 50% Damage (Fight) " ; 
+    cout << "\n3. Decide To End It All (DIE)" ; 
+    cout << "\n What Will You Choose?" ; 
+      getline(cin,redchoice) ; 
+   break;}
+
+  case bluep:
+    {
+     cout << "\nYou Have Teleported To The Pits Of Anarchy, Try To survive....." ; 
+     cout << "\nWhat Will You Do?\n" ; 
+     cout << "\n1.Hide From All the dangers (Run)" ; 
+     cout << "\n2.Try To Find Humankind (Search)" ; 
+     cout << "\n3.Try To Find Food (Food)" ; 
+     cout << "\n What Will It be?" ; 
+       getline(cin,bluechoice) ; 
+   break;}
+}
+  
+  
+}
